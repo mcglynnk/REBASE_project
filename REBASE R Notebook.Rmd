@@ -1,0 +1,41 @@
+##REBASE R notebook - 
+
+####Reading in the data
+
+(From Coursera R Programming-Week 1 - Reading large tables)
+Help R read the file by specifying beforehand: how many rows, column classes
+Take an initial sample of REBASE csv file (enz.csv)
+```{r}
+initial<-read.csv("C:\\Users\\Kelly\\Documents\\Python\\REBASE\\enz.csv",nrows=100,header=T)
+print(initial[1:2,])
+```
+```{r}
+classes<-sapply(initial,class)
+print(classes)
+```
+Now read table using these variables.
+```{r}
+tabAll<-read.table("C:\\Users\\Kelly\\Documents\\Python\\REBASE\\enz.csv", nrow=20, colClasses = classes,header=T, sep=",")
+print(tabAll[1:3,])
+```
+
+Calculate memory requirements:
+enz.csv has 11569 rows, 5 columns, 835kb csv file
+11569 x 5 x 8bytes/numeric value
+```{r}
+bytes= 11569 * 5 * 8
+print(bytes)
+```
+
+```{r}
+MB = bytes / 2^20
+GB = MB/1000
+print(data.frame(c("MB=","GB="),c(MB,GB)))
+```
+Need twice the amount of MB calculated to actually read.
+=MB * 2 = 0.883 MB (883 kb)
+
+For ex:
+if dataset is 1.34 GB and computer has 2 GB of RAM, it will not be able to read in this dataset.
+
+
