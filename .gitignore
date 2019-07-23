@@ -1,4 +1,5 @@
-.Rproj.user
+.Rproj.user/
+
 .Rhistory
 .RData
 .Ruserdata
@@ -34,7 +35,7 @@ orginfo_tbl_full.rds
 _REBASE.RProj
 RE2.py
 
-
+rsconnect/
 
 
 
