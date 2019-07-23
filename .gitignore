@@ -2,6 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+.gitignore
+.Renviron
+REB.RData
 enz.csv
 bacdive-enz-full.R
 bacdive-enz-small-scale.R
