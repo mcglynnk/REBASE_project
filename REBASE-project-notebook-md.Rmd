@@ -3,8 +3,7 @@ title: "REBASE Project"
 output: 
   md_document: 
     variant: markdown_github
-    fig_caption: yes
-    toc: yes
+    
 ---
 
 Project Headline: 
